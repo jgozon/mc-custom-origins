@@ -1,0 +1,18 @@
+{
+	"type": "origins:action_on_hit",
+	"name": "Undying Rage",
+	"description": "A passive ability activated while your health is below 50%, you gain extra power and damage on all of your hits.",
+    "bientity_action": {
+        "type": "origins:damage",
+        "amount": 2,
+        "source": {
+            "name": "cramming.player",
+            "bypasses_armor": true
+        }
+    },
+    "condition": {
+        "type": "origins:health",
+        "comparison": "<",
+        "compare_to": 10
+    }
+}

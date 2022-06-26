@@ -1,0 +1,96 @@
+{
+	"type": "origins:active_self",
+	"name": "Ethereal Sacrifice",
+	"description": "Your connection with the dead allows you to sacrifice 5 hearts in exchange for a short burst of massive damage, speed, and resistance.",
+    "cooldown": 320,
+    "entity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type":"origins:damage",
+                "amount": 10,
+                "source": {
+                    "name": "generic",
+                    "bypasses_armor": true
+                }
+            },
+            {
+                "type": "origins:particle",
+                "particle": "minecraft:lava",
+                "frequency": 6
+            },
+            {    
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:strength",
+                    "amplifier": 1,
+                    "duration": 180
+                }
+            },
+            {    
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:resistance",
+                    "amplifier": 1,
+                    "duration": 180
+                }
+            },
+            {    
+                "type": "origins:apply_effect",
+                "effect": {
+                    "effect": "minecraft:speed",
+                    "amplifier": 1,
+                    "duration": 180
+                }
+            },
+            {
+                "type": "origins:trigger_cooldown",
+                "power": "origins:ethereal_sacrifice"
+            },
+            {
+                "type": "origins:resource",
+                "min": 0,
+                "start_value": 0
+            },
+            {
+                "type": "origins:action_over_time",
+                "entity_action": {
+                    "type": "origins:change_resource",
+                    "resource": "Wangsheng:ethereal_sacrifice",
+                    "change": 1
+                },
+                "interval": 20
+            },
+            {
+                "type": "origins:target_action_on_hit",
+                "entity_action": {
+                    "type": "origins:set_on_fire",
+                    "duration": 4
+                },
+                "target_condition": {
+                    "type": "origins:entity_group",
+                    "group": "default"
+                },
+                "condition": {
+                    "type": "origins:resource",
+                    "resource": "Wangsheng:ethereal_sacrifice",
+                    "comparison": "<",
+                    "compare_to": 10
+                }
+            }
+        ]
+    },
+    "hud_render": {
+        "should_render": true
+    },
+    "condition": {
+        "type": "origins:health",
+        "comparison": ">",
+        "compare_to": 10
+    },
+    "key": {
+        "key": "key.origins.primary_active",
+        "continuous": false
+    }
+    
+}
