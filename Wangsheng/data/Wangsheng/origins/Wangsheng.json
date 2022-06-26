@@ -1,0 +1,12 @@
+{
+	"powers": [
+		"Wangsheng:celestial_purgatory",
+        "Wangsheng:ethereal_sacrifice",
+        "Wangsheng:undying_rage"
+	],
+	"icon": "minecraft:fire_coral",
+	"order": 10,
+	"impact": 3,
+	"name": "Wangsheng",
+	"description": "You are one of few the descendants of the Wangsheng Funeral Parlor. Because of your relationship with the dead, you are able to sacrice health for temporary massive boosts in ability. Be careful as you will need a low amount of health to use all of your abilities."
+}
