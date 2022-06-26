@@ -4,7 +4,7 @@
 	"description": "A passive ability activated while your health is below 50%, you gain extra power and damage on all of your hits.",
     "bientity_action": {
         "type": "origins:damage",
-        "amount": 2,
+        "amount": 8,
         "source": {
             "name": "cramming.player",
             "bypasses_armor": true

@@ -14,11 +14,6 @@
                     "bypasses_armor": true
                 }
             },
-            {
-                "type": "origins:particle",
-                "particle": "minecraft:lava",
-                "frequency": 6
-            },
             {    
                 "type": "origins:apply_effect",
                 "effect": {
@@ -42,46 +37,13 @@
                     "amplifier": 1,
                     "duration": 180
                 }
-            },
-            {
-                "type": "origins:trigger_cooldown",
-                "power": "origins:ethereal_sacrifice"
-            },
-            {
-                "type": "origins:resource",
-                "min": 0,
-                "start_value": 0
-            },
-            {
-                "type": "origins:action_over_time",
-                "entity_action": {
-                    "type": "origins:change_resource",
-                    "resource": "Wangsheng:ethereal_sacrifice",
-                    "change": 1
-                },
-                "interval": 20
-            },
-            {
-                "type": "origins:target_action_on_hit",
-                "entity_action": {
-                    "type": "origins:set_on_fire",
-                    "duration": 4
-                },
-                "target_condition": {
-                    "type": "origins:entity_group",
-                    "group": "default"
-                },
-                "condition": {
-                    "type": "origins:resource",
-                    "resource": "Wangsheng:ethereal_sacrifice",
-                    "comparison": "<",
-                    "compare_to": 10
-                }
             }
         ]
     },
     "hud_render": {
-        "should_render": true
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+        "bar_index": 1
     },
     "condition": {
         "type": "origins:health",

@@ -2,18 +2,22 @@
 	"type": "origins:active_self",
 	"name": "Celestial Purgatory",
 	"description": "When you have 3 hearts or less, you may call upon the undead to deal massive damage to mobs around you and regenerate health.",
-    "cooldown": 1800,
+    "cooldown": 900,
     "entity_action": {
         "type": "origins:and",
         "actions": [
             {
+                "type": "origins:play_sound",
+                "sound": "minecraft:entity.lightning_bolt.impact"
+            },
+            {
                 "type": "origins:area_of_effect",
-                "radius": 6,
+                "radius": 7,
                 "bientity_action": {
                     "type": "origins:target_action",
                     "action": {
                         "type": "origins:set_on_fire",
-                        "duration": 5
+                        "duration": 8
                     }
                 },
                 "bientity_condition": {
@@ -22,7 +26,7 @@
             },
             {
                 "type": "origins:area_of_effect",
-                "radius": 6,
+                "radius": 7,
                 "bientity_action": {
                     "type": "origins:damage",
                     "amount": 10,
@@ -44,6 +48,12 @@
                 }
             }
         ]
+    },
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/resource_bar.png",
+        "bar_index": 7
+
     },
     "condition": {
         "type": "origins:health",

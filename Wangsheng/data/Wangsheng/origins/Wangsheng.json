@@ -1,8 +1,8 @@
 {
 	"powers": [
-		"Wangsheng:celestial_purgatory",
-        "Wangsheng:ethereal_sacrifice",
-        "Wangsheng:undying_rage"
+		"wangsheng:celestial_purgatory",
+		"wangsheng:undying_rage",
+        "wangsheng:ethereal_sacrifice"
 	],
 	"icon": "minecraft:fire_coral",
 	"order": 10,
